@@ -27,7 +27,6 @@ class Game
     while !game_over?
       turn = @turn_manager.next_turn
 
-      puts
       puts "Player #{turn.player.id}: #{turn.question}"
       print ">"
       input = gets.chomp.to_i
@@ -39,6 +38,9 @@ class Game
       end
 
       puts summary
+      sleep 0.8
+      puts
+      puts "----- NEW TURN -----" unless game_over?
     end
 
     winner = find_winner
