@@ -7,8 +7,8 @@ class Player
     @lives = MAX_LIVES
   end
 
-  def health
-    "#{@lives}/#{MAX_LIVES}"
+  def to_s
+    "P#{@id}: #{@lives}/#{MAX_LIVES}"
   end
 
   def lose_life
